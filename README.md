@@ -46,3 +46,28 @@ Product.create({
 ```
 
 You constantly need to track all includes. I don't really understand why it was made that complicated way in `sequelize`. You can read all includes from the schema, and add it if needed automatically. 
+
+## Avaliable methods
+
+- `Model.createNested(record)`
+
+|   | Argument | Type         | Details                          |
+|---|----------|--------------|----------------------------------|
+| 1 | model    | `String`     | A model name.                    |
+| 2 | record   | `Object`     | An Object that is to be created. |
+
+
+**Returns:** `Promise`
+
+## Usage
+The module extends `sails` models with `nested` methods.
+
+Product.createNested({
+  title: 'Chair',
+  user: {
+    first_name: 'Mick',
+    last_name: 'Broadstone',
+  }
+};
+
+It will create two associated records of `User` and `Product`;
