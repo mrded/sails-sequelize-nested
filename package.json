@@ -25,5 +25,8 @@
   "bugs": {
     "url": "https://github.com/mrded/sails-sequelize-nested/issues"
   },
-  "homepage": "https://github.com/mrded/sails-sequelize-nested#readme"
+  "homepage": "https://github.com/mrded/sails-sequelize-nested#readme",
+  "dependencies": {
+    "sails-hook-sequelize": "^1.0.1"
+  }
 }
