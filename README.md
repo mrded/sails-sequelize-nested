@@ -1,5 +1,5 @@
 # Sails Sequelize Nested
-A simple helper, allows you to do nested creates with Sequelize (Sails v1.0).
+A simple helper, allows you to do nested creates with [Sequelize](http://sequelizejs.com/) + [Sails](http://sailsjs.com/).
 
 ## Installation
 
