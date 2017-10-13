@@ -62,6 +62,7 @@ You constantly need to track all includes. I don't really understand why it was 
 ## Usage
 The module extends `sails` models with `nested` methods.
 
+```
 Product.createNested({
   title: 'Chair',
   user: {
@@ -69,5 +70,6 @@ Product.createNested({
     last_name: 'Broadstone',
   }
 };
+```
 
 It will create two associated records of `User` and `Product`;
