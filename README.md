@@ -30,8 +30,6 @@ Product.create({
     first_name: 'Mick',
     last_name: 'Broadstone',
     address: {
-      type: 'home',
-      line_1: '100 Main St.',
       city: 'Austin',
       state: 'TX',
       zip: '78704'
@@ -60,16 +58,40 @@ You constantly need to track all includes. I don't really understand why it was 
 **Returns:** `Promise`
 
 ## Usage
+Consider the following models:
+
+```
+const Product = this.sequelize.define('product', {
+  title: Sequelize.STRING
+});
+const User = this.sequelize.define('user', {
+  first_name: Sequelize.STRING,
+  last_name: Sequelize.STRING
+});
+const Address = this.sequelize.define('address', {
+  city: Sequelize.STRING,
+  state: Sequelize.STRING,
+  zip: Sequelize.STRING,
+});
+
+Product.User = Product.belongsTo(User);
+User.Address = User.belongsTo(Address);
+```
+
 The module extends `sails` models with `nested` methods.
 
+A new `Product`, `User`, and `Address` can be created in one step in the following way:
 ```
 Product.createNested({
   title: 'Chair',
   user: {
     first_name: 'Mick',
     last_name: 'Broadstone',
+    address: {
+      city: 'Austin',
+      state: 'TX',
+      zip: '78704'
+    }
   }
-};
+});
 ```
-
-It will create two associated records of `User` and `Product`;
