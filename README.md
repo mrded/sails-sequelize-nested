@@ -1,5 +1,10 @@
-# sails-sequelize-nested
+# Sails Sequelize Nested
 A simple helper, allows you to do nested creates with Sequelize (Sails v1.0).
+
+## Installation
+
+- [Latest release](https://github.com/mrded/sails-sequelize-nested/releases)
+- `npm install sails-sequelize-nested`
 
 ## Motivation
 As you may notice, nested create can be really tricky with `sequelize`. You have to include all nested associations like so:
