@@ -1,0 +1,29 @@
+{
+  "name": "sails-sequelize-nested",
+  "version": "0.0.1",
+  "description": "A simple helper, allows you to do nested creates with Sequelize + Sails.",
+  "main": "index.js",
+  "sails": {
+    "isHook": true
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrded/sails-sequelize-nested.git"
+  },
+  "keywords": [
+    "sails",
+    "sequelize",
+    "orm",
+    "nested",
+    "create"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mrded/sails-sequelize-nested/issues"
+  },
+  "homepage": "https://github.com/mrded/sails-sequelize-nested#readme"
+}
